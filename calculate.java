@@ -134,11 +134,11 @@ class Main {
                     throw new Exception("Нельзя спользовать одновременно разные системы счисления");
                 }
                     if (isNumeric(operand1)) {
-                        Integer inumber1 = Integer.valueOf(operand1);
-                        Integer inumber2 = Integer.valueOf(operand2);
+                        Integer number1 = Integer.valueOf(operand1);
+                        Integer number2 = Integer.valueOf(operand2);
                         if (operator.length() == 1) {
-                            int result = getOperation(inumber1, inumber2, ch);
-                            System.out.println(inumber1 + " " + ch + " " + inumber2 + " " + " = " + result);
+                            int result = getOperation(number1, number2, ch);
+                            System.out.println(number1 + " " + ch + " " + number2 + " " + " = " + result);
                         } else System.out.println("false2");
                     } else if (isRoman(operand1)) {
                         int number1 = convertToNumber(operand1);
