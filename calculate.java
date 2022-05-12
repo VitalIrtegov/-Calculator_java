@@ -136,6 +136,9 @@ class Main {
                     if (isNumeric(operand1)) {
                         Integer number1 = Integer.valueOf(operand1);
                         Integer number2 = Integer.valueOf(operand2);
+                        if(number1 < 1 || number1 > 10 || number2 < 1 || number2 > 10) {
+                            throw new Exception("Каждый опреанд должен быть не менее 1 и не более 10");
+                        }
                         if (operator.length() == 1) {
                             int result = getOperation(number1, number2, ch);
                             System.out.println(number1 + " " + ch + " " + number2 + " " + " = " + result);
@@ -143,6 +146,9 @@ class Main {
                     } else if (isRoman(operand1)) {
                         int number1 = convertToNumber(operand1);
                         int number2 = convertToNumber(operand2);
+                        if(number1 < 1 || number1 > 10 || number2 < 1 || number2 > 10) {
+                            throw new Exception("Каждый опреанд должен быть не менее 1 и не более 10");
+                        }
                         if (operator.length() == 1) {
                             int result = getOperation(number1, number2, ch);
                             if (!(result > 0)) {
